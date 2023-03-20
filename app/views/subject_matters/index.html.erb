@@ -1,0 +1,27 @@
+<h1><i class="fa-regular fa-book-sparkles"></i> Subject Matter <%= link_to '<i class="fa-solid fa-plus"></i> Create New'.html_safe, new_subject_matter_path , class: 'btn btn-success' %></h1>
+
+<div class="bg-white p-5 rounded shadow-sm">
+
+    <div class="table-responsive">
+    <table class="table table-striped table-sm">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @subject_matters.each do |subject_matter| %>
+        <tr>
+          <td><span class="badge text-bg-secondary"><%= subject_matter.name %></span></td>
+          <td><%= subject_matter.description %></td>
+          <td><%= link_to '<i class="fa-solid text-primary fa-eye"></i>'.html_safe, subject_matter %></td>
+          <td><%= link_to '<i class="fa-solid text-success fa-pen-to-square"></i>'.html_safe, edit_subject_matter_path(subject_matter) %> </td>
+          <td><%= link_to '<i class="fa-solid text-danger fa-trash"></i>'.html_safe, subject_matter, method: :delete,  data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %></td>
+        </tr>
+        <% end %>        
+      </tbody>
+    </table>
+    </div>
+  </div>

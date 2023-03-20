@@ -1,0 +1,66 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ .nav-scroller {
+   position: relative;
+   z-index: 2;
+   height: 2.75rem;
+   overflow-y: hidden;
+ }
+ 
+ .nav-scroller .nav {
+   display: flex;
+   flex-wrap: nowrap;
+   padding-bottom: 1rem;
+   margin-top: -1px;
+   overflow-x: auto;
+   text-align: center;
+   white-space: nowrap;
+   -webkit-overflow-scrolling: touch;
+ }
+ /* Show it is fixed to the top */
+ body {
+   min-height: 100vh;
+   padding-top: 4.5rem;
+   /* fallback for old browsers */
+    background: #0076E7;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to bottom right, rgba(144, 217, 252, 1), rgba(0, 118, 231, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom right,  rgba(144, 217, 252, 1), rgba(0, 118, 231, 1))
+    }   
+ }
+ 
+ .gradient-custom {
+ /* fallback for old browsers */
+ background: #fccb90;
+ 
+ /* Chrome 10-25, Safari 5.1-6 */
+ background: -webkit-linear-gradient(to bottom right, rgba(252, 203, 144, 1), rgba(213, 126, 235, 1));
+ 
+ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ background: linear-gradient(to bottom right, rgba(252, 203, 144, 1), rgba(213, 126, 235, 1))
+ }
+ 
+ .mask-custom {
+ background: rgba(24, 24, 16, .2);
+ border-radius: 2em;
+ backdrop-filter: blur(15px);
+ border: 2px solid rgba(255, 255, 255, 0.05);
+ background-clip: padding-box;
+ box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+ }

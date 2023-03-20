@@ -1,0 +1,7 @@
+<%= render @concept %>
+
+<div>
+  <%= link_to "Back", concepts_path %> |
+  <%= link_to "Edit", edit_concept_path(@concept) %> |
+  <%= link_to '<i class="fa-solid text-danger fa-trash"></i>'.html_safe, @concept, method: :delete,  data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>  
+</div>

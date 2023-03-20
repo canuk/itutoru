@@ -1,0 +1,7 @@
+<%= render @subject_matter %>
+
+<div>
+  <%= link_to "Back", subject_matters_path %> |
+  <%= link_to "Edit", edit_subject_matter_path(@subject_matter) %> |
+  <%= link_to '<i class="fa-solid text-danger fa-trash"></i>'.html_safe, @subject_matter, method: :delete,  data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+</div>

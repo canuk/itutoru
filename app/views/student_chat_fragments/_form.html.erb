@@ -1,0 +1,37 @@
+<%= form_with(model: student_chat_fragment) do |form| %>
+  <% if student_chat_fragment.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(student_chat_fragment.errors.count, "error") %> prohibited this student_chat_fragment from being saved:</h2>
+
+      <ul>
+        <% student_chat_fragment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :student_chat_id, style: "display: block" %>
+    <%= form.text_field :student_chat_id %>
+  </div>
+
+  <div>
+    <%= form.label :response_type, style: "display: block" %>
+    <%= form.text_field :response_type %>
+  </div>
+
+  <div>
+    <%= form.label :chat_text, style: "display: block" %>
+    <%= form.text_area :chat_text %>
+  </div>
+
+  <div>
+    <%= form.label :student_response, style: "display: block" %>
+    <%= form.text_field :student_response %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

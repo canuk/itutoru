@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @student_chat_fragment %>
+
+<div>
+  <%= link_to "Edit this student chat fragment", edit_student_chat_fragment_path(@student_chat_fragment) %> |
+  <%= link_to "Back to student chat fragments", student_chat_fragments_path %>
+
+  <%= button_to "Destroy this student chat fragment", @student_chat_fragment, method: :delete %>
+</div>

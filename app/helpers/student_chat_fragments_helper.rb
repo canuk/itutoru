@@ -1,0 +1,2 @@
+module StudentChatFragmentsHelper
+end

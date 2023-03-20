@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Student chat fragments</h1>
+
+<div id="student_chat_fragments">
+  <% @student_chat_fragments.each do |student_chat_fragment| %>
+    <%= render student_chat_fragment %>
+    <p>
+      <%= link_to "Show this student chat fragment", student_chat_fragment %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New student chat fragment", new_student_chat_fragment_path %>
