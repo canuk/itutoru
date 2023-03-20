@@ -11,8 +11,11 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_03_19_124433) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "concepts", force: :cascade do |t|
-    t.integer "subject_matter_id", null: false
+    t.bigint "subject_matter_id", null: false
     t.string "name"
     t.string "concept_prompt"
     t.text "notes"
@@ -30,7 +33,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_19_124433) do
   end
 
   create_table "student_chats", force: :cascade do |t|
-    t.integer "concept_id", null: false
+    t.bigint "concept_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["concept_id"], name: "index_student_chats_on_concept_id"
